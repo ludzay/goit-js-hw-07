@@ -9,8 +9,9 @@ const BtnDestroy = document.querySelector("button[data-destroy]");
 const InpNum = document.querySelector("input");
 const AddBox = document.getElementById("boxes");
 let Num = 0;
-let j = 0;
+
 function clickHandlerCreate(event) {
+  let j = 0;
   InpNum.value = "";
   console.log(InpNum);
   if (Num > 0 && Num <= 100) {
