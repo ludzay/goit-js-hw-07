@@ -25,13 +25,24 @@ const images = [
   },
 ];
 
-const Elem = document.querySelector(".gallery");
-images.forEach((image) => {
-  const LiElem = document.createElement("ol");
-  Elem.append(LiElem);
-  const imageEl = document.createElement("img");
-  imageEl.alt = image.alt; //  imageEl.setAttribute("alt", image.alt);
-  imageEl.src = image.url; // imageEl.setAttribute("src", image.url);
-  imageEl.width = 200;
-  LiElem.append(imageEl);
-});
+const gallery = document.querySelector(".gallery");
+
+function createImageMarkup(image) {
+  const markup = `<li class="gallery-item">
+          <img
+          class="gallery-image"
+          src="${image.url}"
+          alt="${image.alt}"          
+        />
+        
+    </li>`;
+  return markup;
+}
+
+let markup = "";
+let i = 1;
+for (let image of images) {
+  markup += createImageMarkup(image);
+}
+
+gallery.innerHTML = markup;
