@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.gallery {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+
+
+}
+
+.gallery-item {
+    
+}
+
+.gallery-image {
+
+    display: block;
+    width: 370px;
+    height: 200px;
+    object-fit: cover;
+
+
+}
+
+.gallery-image:hover {
+
+}
+
